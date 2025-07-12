@@ -1,0 +1,157 @@
+{
+  "info": {
+    "name": "SupportIQ API",
+    "_postman_id": "example-id",
+    "description": "Postman collection for SupportIQ backend APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Ticket",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"id\": 1, \"title\": \"Sample Ticket\", \"description\": \"Something is broken\", \"status\": \"open\" }"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/tickets/",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "tickets"
+          ]
+        }
+      }
+    },
+    {
+      "name": "List Tickets",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/tickets/",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "tickets"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Recommend Solution",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"query\": \"My computer won\u2019t start\" }"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/tickets/recommend/",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "tickets",
+            "recommend"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Add KB Article",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"id\": 1, \"question\": \"How to reset password?\", \"answer\": \"Go to settings and click reset.\" }"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/kb/",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "kb"
+          ]
+        }
+      }
+    },
+    {
+      "name": "List KB Articles",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/kb/",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "kb"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Trigger RPA",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/rpa/trigger/reset_password?param=john",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "rpa",
+            "trigger",
+            "reset_password"
+          ],
+          "query": [
+            {
+              "key": "param",
+              "value": "john"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
