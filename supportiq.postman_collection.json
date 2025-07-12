@@ -53,35 +53,6 @@
       }
     },
     {
-      "name": "Recommend Solution",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{ \"query\": \"My computer won\u2019t start\" }"
-        },
-        "url": {
-          "raw": "http://127.0.0.1:8000/api/tickets/recommend/",
-          "protocol": "http",
-          "host": [
-            "127.0.0.1"
-          ],
-          "port": "8000",
-          "path": [
-            "api",
-            "tickets",
-            "recommend"
-          ]
-        }
-      }
-    },
-    {
       "name": "Add KB Article",
       "request": {
         "method": "POST",
