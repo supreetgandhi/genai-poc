@@ -1,3 +1,5 @@
+from langchain_huggingface import HuggingFaceEmbeddings
+
 from vector_store.faiss_store import FAISSStore
 from services.openai_service import generate_embedding
 
@@ -10,3 +12,6 @@ def add_document(text: str, meta: dict):
 def search_document(query: str, k=3):
     embedding = generate_embedding(query)
     return store.search(embedding, k)
+
+def getEmbeddings():
+    return HuggingFaceEmbeddings(model_name = "sentence-transformers/all-MiniLM-L6-v2")
